@@ -18,7 +18,7 @@ def scrap(url: str) -> list[str]:
       }
     r = requests.get(url, headers=headers)
 
-    mass = re.findall(r'((\+7|8)+[-, ]?[(]?\d{3}[)]?[-, ]?\d{3}[-, ]?\d{2}[-, ]?\d{2})', r.content.decode('utf-8'))
+    mass = re.findall(r'((\+7|8)[-, ]?[(]?\d{3}[)]?[-, ]?\d{3}[-, ]?\d{2}[-, ]?\d{2})', r.content.decode('utf-8'))
 
     # Filtering to unique items
     result = []
