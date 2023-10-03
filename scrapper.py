@@ -26,6 +26,3 @@ def scrap(url: str) -> list[str]:
         if item not in result:
             result.append(item)
     return result
-
-
-print(scrap('https://repetitors.info/'))
